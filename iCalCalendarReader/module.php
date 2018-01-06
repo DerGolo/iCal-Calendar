@@ -522,7 +522,7 @@ class iCalCalendarReader extends ErgoIPSModule {
         // empty configuration buffer
         $Notifications = array();
         $ChildInstances = IPS_GetInstanceListByModuleID( ICCN_Instance_GUID );
-        if ( sizeof( $ChildInstances ) > 0 )
+        if ( sizeof( $ChildInstances ) == 0 )
             return;
         // transfer configuration
         foreach( $ChildInstances as $ChInstance )
